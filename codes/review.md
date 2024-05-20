@@ -40,13 +40,13 @@
 ## コード
 以下の観点でチェックする
 
-* [INとOUTの確認](https://github.com/KKyosuke/KKyosuke/new/main#in%E3%81%A8out%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [ロジックの確認](https://github.com/KKyosuke/KKyosuke/new/main#%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [テストの網羅性に関して](https://github.com/KKyosuke/KKyosuke/new/main#%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E7%B6%B2%E7%BE%85%E6%80%A7%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [記載方法についての確認](https://github.com/KKyosuke/KKyosuke/new/main#%E8%A8%98%E8%BC%89%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [命名に関して](https://github.com/KKyosuke/KKyosuke/new/main#%E5%91%BD%E5%90%8D%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [クラス/関数の分割粒度に関して](https://github.com/KKyosuke/KKyosuke/new/main#%E3%82%AF%E3%83%A9%E3%82%B9%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%86%E5%89%B2%E7%B2%92%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [コメント量に関して](https://github.com/KKyosuke/KKyosuke/new/main#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E9%87%8F%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+* [INとOUTの確認](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#in%E3%81%A8out%E3%81%AE%E7%A2%BA%E8%AA%8D)
+* [ロジックの確認](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%81%AE%E7%A2%BA%E8%AA%8D)
+* [テストの網羅性に関して](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E7%B6%B2%E7%BE%85%E6%80%A7%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+* [記載方法についての確認](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E8%A8%98%E8%BC%89%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E7%A2%BA%E8%AA%8D)
+* [命名に関して](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E5%91%BD%E5%90%8D%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+* [クラス/関数の分割粒度に関して](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E3%82%AF%E3%83%A9%E3%82%B9%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%86%E5%89%B2%E7%B2%92%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+* [コメント量に関して](https://github.com/KKyosuke/KKyosuke/blob/main/codes/review.md#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E9%87%8F%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
 
 ### INとOUTの確認
 必須対応になる

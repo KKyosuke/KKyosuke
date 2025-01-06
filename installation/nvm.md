@@ -47,3 +47,8 @@ nvm current
 ```
 node -v > .nvmrc
 ```
+
+#### Auto switching
+
+[zsh](https://github.com/nvm-sh/nvm?tab=readme-ov-file#zsh)
+

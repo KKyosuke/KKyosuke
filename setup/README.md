@@ -14,8 +14,9 @@ A memorandum for building local mac environment
 `brew install {package_name}`  
 
 ### Packages
-* [Neovim](https://neovim.io/)(=neovim)
-* [colima](https://github.com/abiosoft/colima)(=colima)
+* [Hack](https://www.programmingfonts.org/#hack) (=font-Hack-nerd-font)
+* [Neovim](https://neovim.io/) (=neovim)
+* [colima](https://github.com/abiosoft/colima) (=colima)
     * Docker client is required for Docker runtime. Installable with brew `brew install docker`.
     * run `sudo ln -sf ~/.colima/docker.sock /var/run/docker.sock` to use in vs code
 

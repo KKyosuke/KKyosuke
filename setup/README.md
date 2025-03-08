@@ -9,7 +9,7 @@ A memorandum for building local mac environment
 * [Slack](https://slack.com/intl/ja-jp/)
 
 ## [Homebrew](https://brew.sh/)
-Manage background services using [Homebrew Services](https://github.com/Homebrew/homebrew-services?tab=readme-ov-file#homebrew-services)
+※ Manage background services using [Homebrew Services](https://github.com/Homebrew/homebrew-services?tab=readme-ov-file#homebrew-services)
 
 ### Install command
 `brew install {package_name}`  

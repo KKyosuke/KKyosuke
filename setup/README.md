@@ -15,6 +15,7 @@ A memorandum for building local mac environment
 
 ### Packages
 * [Hack](https://www.programmingfonts.org/#hack) (=font-Hack-nerd-font)
+    * Needs to be set in Terminal Settings
 * [Neovim](https://neovim.io/) (=neovim)
 * [colima](https://github.com/abiosoft/colima) (=colima)
     * Docker client is required for Docker runtime. Installable with brew `brew install docker`.

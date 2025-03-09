@@ -14,6 +14,7 @@ A memorandum for building local mac environment
 `brew install {package_name}`  
 
 ### Packages
+* [Lazygit](https://github.com/kdheepak/lazygit.nvim)(=lazygit)
 * [Hack](https://www.programmingfonts.org/#hack) (=font-Hack-nerd-font)
     * Needs to be set in Terminal Settings
 * [Neovim](https://neovim.io/) (=neovim)

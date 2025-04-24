@@ -22,6 +22,7 @@ A memorandum for building local mac environment
 * [colima](https://github.com/abiosoft/colima) (=colima)
     * Docker client is required for Docker runtime. Installable with brew `brew install docker`.
     * run `sudo ln -sf ~/.colima/docker.sock /var/run/docker.sock` to use in vs code
+    * run `ln -sfn $(which docker-buildx) ~/.docker/cli-plugins` to use buildx
 
 > [!NOTE]
 > Manage background services using [Homebrew Services](https://github.com/Homebrew/homebrew-services?tab=readme-ov-file#homebrew-services)

@@ -1,104 +1,136 @@
 # Code Review Perspectives
-## PR
-ure that the title and content are described with the following points of view.
+
+This document summarizes the guidelines and checklists for conducting code reviews.
+
+## PR Description
+
+Ensure that the title and content are described according to the following perspectives.
 
 ### Title
-* Is it possible to tell what the change was based on by the title alone?
-  * Is the identifier of the corresponding ticket number or function listed?
-  * Are the correspondence details described in text as well as identifiers?
 
-### Contents
-* Contents of changes
-  * What kinds of changes did you make?
-  * Why did you make those changes?
-  * etc..
-* Changed codes
-  * What codes where changed in detail?
-  * How did you think and decide to change in that way?
-  * etc..
-* Additional information needed to check the PR
-  * If you have added a package, a link that shows what you have added
-  * Include information that cannot be confirmed unless you know
-* Test point of view
-  * Describe what kind of test you did
-  * Paste evidence
-* Related Pages
-  * Describe the page you referred to, PR, etc.
+- Does the title alone clearly explain what was changed?
+- Is the corresponding ticket number or feature ID listed?
+- Are the details described in text as well as using identifiers?
 
-## Regarding comments
-I would like to add a prefix to the beginning of the comment as follows, so please respond accordingly
+### Content
 
-* must:
-  * 「must」 = Must be supported
-* want:
-  * 「want」 = Feelings to be addressed if possible.
-* nits:
-  * 「nitpick」 = It's a minor point (meaning “poking in the corner of a heavy box”), so I don't care whether it's handled or not.
-* Q:
-  * 「Question」= Question for an answer (I'd like to know the thoughts that led to that output)
+- **Scope of Work**:
+  - What kind of changes did you make?
+  - What is the background or reason for these changes?
+- **Modified Areas**:
+  - Specifically, what modifications were made?
+  - What were the technical considerations and decisions?
+- **Additional Information**:
+  - If a package was added, include a link to its documentation.
+  - Include any other information necessary as prerequisite knowledge.
+- **Testing**:
+  - What kind of tests were conducted?
+  - Is evidence (screenshots, logs, etc.) attached?
+- **Related Pages**:
+  - Are related documents or PRs listed?
 
-## コード
-Check the following aspects
+## Prefix for Comments
 
-* [Confirmation of IN and OUT](./review.md#in%E3%81%A8out%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [Logic Confirmation](./review.md#%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [Test comprehensiveness](./review.md#%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E7%B6%B2%E7%BE%85%E6%80%A7%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [Confirmation of description method](./review.md#%E8%A8%98%E8%BC%89%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E7%A2%BA%E8%AA%8D)
-* [Naming](./review.md#%E5%91%BD%E5%90%8D%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [Granularity of class/function partitioning](./review.md#%E3%82%AF%E3%83%A9%E3%82%B9%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%86%E5%89%B2%E7%B2%92%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-* [Comment volume](./review.md#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E9%87%8F%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+To clarify the intent of review comments, use the following prefixes.
 
-### Confirmation of IN and OUT
-必須対応になる
-実装したコードのインプットとアウトプットがI/Fなどの理想としているものと同じであることを確認する。
-* 画面の時
-  * 呼び出しパラメータの妥当性の確認。
-* APIの時
-  * リクエストとリスポンスの妥当性の確認
+- **must**: Required change.
+- **want**: Suggested change (if possible).
+- **nits**: Minor point (at the author's discretion).
+- **Q**: Question or confirmation of intent.
+
+## Code Review Checklist
+
+Focus on the following items.
+
+- [Confirmation of Input and Output](#confirmation-of-input-and-output)
+- [Logic Confirmation](#logic-confirmation)
+- [Test Coverage](#test-coverage)
+- [Style Consistency](#style-consistency)
+- [Naming Conventions](#naming-conventions)
+- [Granularity of Classes and Functions](#granularity-of-classes-and-functions)
+- [Appropriateness of Comments](#appropriateness-of-comments)
+- [Prohibited Items and Anti-patterns](#prohibited-items-and-anti-patterns)
+
+### Confirmation of Input and Output
+
+Verify that the input and output of the implemented code match the design (I/F, etc.).
+
+- **UI/Screens**: Verify the validity of calling parameters.
+- **APIs**: Verify the validity of requests and responses.
 
 ### Logic Confirmation
-実装が合っているかを以下の様な観点から確認する。
-以下のようなポイントで確認する
-* 取得SQLの条件設定が合っているのか？
-* 追加、更新、削除のパラメータがあっているのか？
-* 処理内の条件分岐に問題がないのか？
-* エラーハンドリングがちゃんとできているのか？
 
-### Test comprehensiveness
-テストの網羅性について以下のような観点から確認する。
-* テストコードがある場合には
-  * 書き方があっているのか？
-  * パターン分網羅できているのか？
-  * テストの実行速度に悪影響を与えてないのか？
-* テストコードがない場合には
-  * 代わりにどのようなテストを行ったか記載があるのか？
-  * 実行した結果が気さされているのか？
-  * 十分なパターンをもうらしているのか？
+Verify the correctness of the implementation based on the following.
 
-### Confirmation of description method
-プロジェクト全体の平仄に従ってるか、以下の観点から確認する。
-* 全体の実装フローは同じ様になっているか？
-  * example) controller→transaction→service→repositoryとなっている構造の場合にそれに従っているか 
-* 命名規則に統一感があるのか？ 
-* ファイルの分割粒度に統一感はあるのか？
+- Are the conditions for SQL queries correct?
+- Are the parameters for create, update, and delete correct?
+- Are there any issues with conditional branching?
+- Is error handling performed appropriately?
 
-### Naming
-わかりやすい命名になのか、以下の観点から確認する。
-* 実体系（クラス・フィールドなど）
-  * 何の実体かわかる命名になっているのか？
-  * 何の値がフィールドに格納されているかわかる様になっているのか？
-* 動作系（関数など）
-  * 動詞から始まっているのか？
-  * 関数内部の処理を簡潔に表せているのか？
-  * 何を返却するのか名前からわかる様になっているのか？  
+### Test Coverage
 
-### Granularity of class/function partitioning
-関数の中の処理は極力シンプルになるように心がける。  
-こちらができてないと可読性の低下や関数を作ってない人が使用した時の認識齟齬を生みバグの原因となることがある。  
-関数名と処理がどうしても一致しない場合には粒度に問題がある可能性もあるのでファイル分割を勧める。  
+Verify that testing is sufficient.
 
-### Comment volume
-基本的には命名で大まかなフローは掴める様にしたいが、複雑な処理や特別な処理の場合にはコメントを残した方が可読性が上がる。  
-複雑な仕様（ロジック）が組み込まれる場合にはコメントを追記することを推奨する。  
-※ コメントの言語はそのプロジェクトの方針に合わせる  
+- **If test code exists**:
+  - Is the writing style correct?
+  - Are all necessary patterns covered?
+  - Does it negatively impact test execution speed?
+- **If test code does not exist**:
+  - Is there a description of how the code was tested?
+  - Is the execution result (evidence) provided?
+  - Are all necessary patterns covered?
+
+### Style Consistency
+
+Verify compliance with project standards.
+
+- Is the implementation flow consistent (e.g., controller → transaction → service → repository)?
+- Is there consistency in naming conventions?
+- Is there consistency in the granularity of file separation?
+
+### Naming Conventions
+
+Verify that naming clearly conveys intent.
+
+- **Entities (Classes, Fields, etc.)**:
+  - Does the name clearly represent the entity?
+  - Can the values stored in fields be inferred?
+- **Actions (Functions, Methods, etc.)**:
+  - Does the name start with a verb?
+  - Does the name briefly represent the internal processing?
+  - Can the return value be inferred from the name?
+
+### Granularity of Classes and Functions
+
+Keep the logic within functions as simple as possible.
+Insufficient separation leads to decreased readability and bugs caused by misunderstandings when others reuse the code.
+If a function name and its logic do not match, the granularity may be an issue; consider further separation.
+
+### Appropriateness of Comments
+
+Ideally, intent should be conveyed by naming alone, but comments are recommended for complex logic or special processing.
+
+- Supplement complex specifications with background and intent in comments.
+- Note: The language of comments should follow project policy.
+
+### Prohibited Items and Anti-patterns
+
+Ensure the following items are not present.
+
+- **Direct Use of Magic Numbers**:
+  - Define meaningful numbers or strings as constants.
+- **Bloated Functions or Classes**:
+  - Consider separation if a function exceeds 100 lines or if a class has too many responsibilities (violating the Single Responsibility Principle).
+- **Inclusion of Debug Code**:
+  - Ensure `console.log`, temporary comments, or unused variables are not left behind.
+- **Emotional Reviews**:
+  - Reviews are for the "code," not the person. Avoid language that could be seen as a personal attack.
+  - Avoid aggressive language and provide constructive feedback.
+
+---
+
+Related Documents:
+- [Issue Creation Policy](./issue.md)
+- [Pull Request Creation Policy](./pull-request.md)
+- [Commit Conventions](./commit.md)
 

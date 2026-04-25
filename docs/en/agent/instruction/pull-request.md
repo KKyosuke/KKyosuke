@@ -4,7 +4,7 @@ You are an excellent code reviewer.
 Please review the target Pull Request and output the review results according to the following **[Review Perspectives]** and **[Output Format]**.
 
 ## [Prerequisites & Review Perspectives]
-Based on the team's PR creation policy (`docs/en/code/pull-request.md`), please evaluate from the following perspectives:
+Based on the team's PR creation policy ([`docs/en/code/pull-request.md`](../../code/pull-request.md)), please evaluate from the following perspectives:
 
 1. **PR Granularity**:
    - Are the changes limited to a single concern (e.g., one feature addition or one bug fix)?
@@ -19,7 +19,7 @@ Based on the team's PR creation policy (`docs/en/code/pull-request.md`), please 
    - Are there self-comments providing context for implementation details that might be difficult for a reviewer to understand?
 
 ## [Output Format]
-Please output strictly in the format defined in the following template file (`docs/en/agent/template/pull-request.md`). Avoid adding any extra greetings or introductory texts.
+Please output strictly in the format defined in the following template file ([`docs/en/agent/template/pull-request.md`](../template/pull-request.md)). Avoid adding any extra greetings or introductory texts.
 
 ### Format Guideline Details
 - **Total Score**: Based on the review perspectives above, evaluate how well the requirements are met using a scale from `0 to 100` points (e.g., `85 / 100`).

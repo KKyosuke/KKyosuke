@@ -6,22 +6,26 @@ Please review the target Pull Request and output the review results according to
 ## [Prerequisites & Review Perspectives]
 Based on the team's PR creation policy ([`docs/en/code/pull-request.md`](../../code/pull-request.md)), please evaluate from the following perspectives:
 
-1. **PR Granularity**:
-   - Are the changes limited to a single concern (e.g., one feature addition or one bug fix)?
-   - Is the PR reasonably sized, and does it avoid unintentionally mixing in unrelated refactoring?
-2. **PR Structure (Overview)**:
-   - Does the title use an appropriate prefix such as `feat:`, `fix:`, `refactor:`, `docs:`?
-   - Does the description clearly explain the purpose, what was changed, and the scope of impact?
-3. **Tests and Evidence**:
-   - Are there test codes or visual evidence (e.g., screenshots) included to prove it works correctly?
-4. **General Review Considerations**:
-   - Are there any leftover debugging codes (e.g., `console.log`)?
-   - Are there self-comments providing context for implementation details that might be difficult for a reviewer to understand?
+1. **Correctness / Bug Risk**:
+   - Does it work as intended? Are edge cases and error handling properly considered?
+2. **Security**:
+   - Are there any vulnerability risks (e.g., XSS, injections)? Are sensitive information or API keys hardcoded?
+3. **Maintainability / Readability**:
+   - Are naming conventions followed? Is the code complexity manageable, and are responsibilities well-separated?
+4. **Performance**:
+   - Are there any inefficient processes that negatively impact response time or memory usage (e.g., N+1 queries, heavy loops)?
+5. **Testing**:
+   - Are sufficient test codes or operational evidence included? Are the test cases comprehensive?
+6. **Design / Architecture**:
+   - Does it adhere to the project's design principles? Are existing components appropriately reused or extended?
+7. **PR Structure & Documentation**:
+   - Is the PR granularity appropriate (not too large)? Are the title and description clear? Are necessary documents updated?
 
 ## [Output Format]
 Please output strictly in the format defined in the following template file ([`docs/en/agent/template/pull-request.md`](../template/pull-request.md)). Avoid adding any extra greetings or introductory texts.
 
 ### Format Guideline Details
-- **Total Score**: Based on the review perspectives above, evaluate how well the requirements are met using a scale from `0 to 100` points (e.g., `85 / 100`).
+- **Overall Evaluation**: Evaluate the overall PR using one of the four academic grading levels: "Excellent", "Good", "Fair", or "Poor".
+- **Perspective Scores**: Evaluate each review perspective separately and score it out of `10` points.
 - **Summary**: Briefly summarize the overall evaluation of the PR, highlighting its strong points and any general concerns.
 - **List of Points**: Focus on the areas needing improvement or modification. Output this as a Markdown table that includes the Reason, Priority (`Must` / `Better` / `Nits`), and Overview. Please use the guidelines provided in the template to determine the correct priority level.

@@ -17,3 +17,12 @@
 
 ---
 
+### エージェント手順書 (`agent/`)
+
+- **[手順書一覧](agent/list.md)**
+  - AIエージェント（GitHub Copilotなど）向けの手順書（プロンプト）の目次。
+
+#### 詳細
+
+- **[Pull Requestレビュー 手順書](agent/instruction/pull-request.md)**
+  - Pull Requestの自動コードレビューを行い、サマリと指摘点を出力するためのプロンプト指示書。

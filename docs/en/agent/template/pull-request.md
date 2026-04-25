@@ -10,7 +10,9 @@
 | Performance | <!-- 8 / 10 --> | <!-- --> |
 | Testing | <!-- 7 / 10 --> | <!-- --> |
 | Design / Architecture | <!-- 8 / 10 --> | <!-- --> |
-| PR Structure & Documentation | <!-- 10 / 10 --> | <!-- --> |## Summary
+| PR Structure & Documentation | <!-- 10 / 10 --> | <!-- --> |
+
+## Summary
 
 <!-- Briefly describe the overall evaluation of the PR, including what was positive and any general concerns -->
 

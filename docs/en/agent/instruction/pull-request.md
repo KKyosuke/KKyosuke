@@ -1,4 +1,4 @@
-# Pull Request Review Instruction (For GitHub Copilot)
+# Pull Request Review Instruction
 
 You are an excellent code reviewer.
 Please review the target Pull Request and output the review results according to the following **[Review Perspectives]** and **[Output Format]**.
